@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Interactif – Elboni Marwa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS perso -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR FIXE -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#accueil">Mon CV personnel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formation">Formation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Expériences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interets">Centres d’intérêt</a></li>
+                </ul>
+
+                <!-- Bouton Dark / Light -->
+                <button id="themeToggle" class="btn btn-outline-light ms-3 btn-sm">
+                     Mode sombre
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECTION PROFIL -->
+    <header id="profil" class="container section">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <!-- Mets ta photo dans /img/photo.jpg -->
+                <img src="img/photo.jpg.jpeg" alt="Photo de profil" class="profile-img">
+            </div>
+            <div class="col-md-8">
+                <h1>Elboni Marwa</h1>
+                <h5 class="text-muted">Étudiante en Informatique appliquées</h5>
+
+                <p class="mt-3 mb-1">
+                    <strong>Email :</strong> m.elboni4548@uca.ac.ma  
+                    <br><strong>Téléphone :</strong> +212 760050158
+                </p>
+                <p class="mb-3">
+                    <strong>GitHub :</strong> <a href="#" target="_blank">https://github.com/Marwa430472/-cv-interactif-elboni-marwa.git</a>
+                </p>
+                <p id="resumeComplet" class="d-none">
+                    Passionné par les technologies web,J’ai une bonne maîtrise des bases du front-end (HTML,
+                    CSS, Bootstrap, JavaScript) et je suis motivé pour apprendre de nouveaux
+                    outils et frameworks. Sérieux, autonome et curieux, je m’intègre facilement
+                    dans une équipe.
+                </p>
+
+                <button id="btnPlus" class="btn btn-primary mt-2">Afficher plus</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION FORMATION -->
+    <section id="formation" class="container section">
+        <h2>Formation</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h5>Licence Informatique appliquées – Université Cadi Ayyad  Faculte des Sciences Semlalia</h5>
+                <span class="text-muted">2025 – 2026</span>
+            </div>
+            <div class="timeline-item">
+                <h5>Baccalauréat Scientifique</h5>
+                <span class="text-muted">2024</span>
+                <p>Option : Mathématiques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION COMPÉTENCES -->
+    <section id="competences" class="container section">
+        <h2>Compétences</h2>
+
+        <!-- Onglets interactifs -->
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="tech-tab" data-bs-toggle="pill" data-bs-target="#tech" type="button" role="tab">
+                    Techniques
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="soft-tab" data-bs-toggle="pill" data-bs-target="#soft" type="button" role="tab">
+                    Soft Skills
+                </button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="pills-tabContent">
+            <!-- Compétences techniques -->
+            <div class="tab-pane fade show active" id="tech" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>HTML5</p>
+                        <div class="progress">
+                            <div class="progress-bar skill-bar bg-success" data-skill="70"></div>
+                        </div>
+
+                        <p class="mt-3">CSS / Bootstrap</p>
+                        <div class="progress">
+                            <div class="progress-bar skill-bar bg-info" data-skill="70"></div>
+                        </div>
+
+                        <p class="mt-3">JavaScript</p>
+                        <div class="progress">
+                            <div class="progress-bar skill-bar bg-warning" data-skill="70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soft skills -->
+            <div class="tab-pane fade" id="soft" role="tabpanel">
+                <ul>
+                    <li>Travail en équipe</li>
+                    <li>Communication</li>
+                    <li>Organisation</li>
+                    <li>Capacité d’adaptation</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION EXPÉRIENCES -->
+    <section id="experience" class="container section">
+        <h2>Expériences</h2>
+
+        <div class="accordion" id="expAccordion">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="exp2-heading">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2">
+                        Mini-Projet Web (2025)
+                    </button>
+                </h2>
+                <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+                    <div class="accordion-body">
+                        Réalisation d’un mini‑projet portant sur la création d’une page web interactive en utilisant HTML, CSS (Bootstrap) et JavaScript.
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROJETS -->
+    <section id="projets" class="container section">
+        <h2>Projets</h2>
+        <div class="row g-3">
+            <div class="col-md-4">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio personnel</h5>
+                        <p class="card-text">Site web présentant mes projets et compétences, réalisé en HTML/CSS/JS.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CENTRES D’INTÉRÊT -->
+    <section id="interets" class="container section">
+        <h2>Centres d’intérêt</h2>
+        <ul class="list-inline">
+            <li class="list-inline-item badge bg-primary m-1">Technologie</li>
+            <li class="list-inline-item badge bg-secondary m-1">Sport</li>
+            <li class="list-inline-item badge bg-success m-1">Lecture</li>
+            <li class="list-inline-item badge bg-warning m-1">Voyages</li>
+            <li class="list-inline-item badge bg-info m-1">Musique</li>
+        </ul>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer class="text-center py-3 mt-4 bg-dark text-white">
+        © 2025 – Elboni Marwa – CV Interactif
+    </footer>
+
+    <!-- Bootstrap JS + ton script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
