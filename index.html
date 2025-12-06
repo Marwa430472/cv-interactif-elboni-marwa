@@ -6,7 +6,10 @@
     <title>CV Interactif – Elboni Marwa</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
     <!-- CSS perso -->
     <link rel="stylesheet" href="style.css">
@@ -16,8 +19,19 @@
     <!-- NAVBAR FIXE -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
         <div class="container">
-            <a class="navbar-brand" href="#accueil">Mon CV personnel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-semibold" href="#profil">
+                Mon CV personnel
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Menu de navigation"
+            >
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -33,7 +47,7 @@
 
                 <!-- Bouton Dark / Light -->
                 <button id="themeToggle" class="btn btn-outline-light ms-3 btn-sm">
-                     Mode sombre
+                    Mode sombre
                 </button>
             </div>
         </div>
@@ -43,61 +57,97 @@
     <header id="profil" class="container section">
         <div class="row align-items-center">
             <div class="col-md-4 text-center mb-4 mb-md-0">
-                <!-- Mets ta photo dans /img/photo.jpg -->
+                <!-- Mets ta photo dans /photo.jpg.jpeg -->
                 <img src="photo.jpg.jpeg" alt="Photo de profil" class="profile-img">
             </div>
-            <div class="col-md-8">
-                <h1>Elboni Marwa</h1>
-                <h5 class="text-muted">Étudiante en Informatique appliquées</h5>
 
-                <p class="mt-3 mb-1">
-                    <strong>Email :</strong> m.elboni4548@uca.ac.ma  
-                    <br><strong>Téléphone :</strong> +212 760050158
+            <div class="col-md-8">
+                <h1 class="mb-1">Elboni Marwa</h1>
+                <h5 class="text-muted mb-3">Étudiante en Informatique appliquées</h5>
+
+                <p class="mb-1">
+                    <strong>Email :</strong> m.elboni4548@uca.ac.ma<br>
+                    <strong>Téléphone :</strong> +212 760050158
                 </p>
+
                 <p class="mb-3">
-                    <strong>GitHub :</strong> <a href="#" target="_blank">https://github.com/Marwa430472/-cv-interactif-elboni-marwa.git</a>
+                    <strong>GitHub :</strong>
+                    <a href="https://github.com/Marwa430472/-cv-interactif-elboni-marwa.git" target="_blank">
+                        github.com/Marwa430472
+                    </a>
                 </p>
-                <p id="resumeComplet" class="d-none">
-                    Passionné par les technologies web,J’ai une bonne maîtrise des bases du front-end (HTML,
-                    CSS, Bootstrap, JavaScript) et je suis motivé pour apprendre de nouveaux
-                    outils et frameworks. Sérieux, autonome et curieux, je m’intègre facilement
+
+                <!-- Résumé court + complet -->
+                <p id="resumeCourt" class="mb-2">
+                    Passionnée par les technologies web, je maîtrise les bases du front-end
+                    (HTML, CSS, Bootstrap, JavaScript).
+                </p>
+
+                <p id="resumeComplet" class="d-none mb-2">
+                    Passionnée par les technologies web, j’ai une bonne maîtrise des bases du front-end
+                    (HTML, CSS, Bootstrap, JavaScript) et je suis motivée pour apprendre de nouveaux
+                    outils et frameworks. Sérieuse, autonome et curieuse, je m’intègre facilement
                     dans une équipe.
                 </p>
 
-                <button id="btnPlus" class="btn btn-primary mt-2">Afficher plus</button>
+                <button id="btnPlus" class="btn btn-primary mt-2">
+                    Afficher plus
+                </button>
             </div>
         </div>
     </header>
 
     <!-- SECTION FORMATION -->
     <section id="formation" class="container section">
-        <h2>Formation</h2>
+        <h2 class="section-title">Formation</h2>
+
         <div class="timeline">
             <div class="timeline-item">
-                <h5>Licence Informatique appliquées – Université Cadi Ayyad  Faculte des Sciences Semlalia</h5>
+                <h5 class="mb-1">
+                    Licence Informatique appliquées – Université Cadi Ayyad, Faculté des Sciences Semlalia
+                </h5>
                 <span class="text-muted">2025 – 2026</span>
             </div>
+
             <div class="timeline-item">
-                <h5>Baccalauréat Scientifique</h5>
+                <h5 class="mb-1">Baccalauréat Scientifique</h5>
                 <span class="text-muted">2024</span>
-                <p>Option : Mathématiques.</p>
+                <p class="mb-0">Option : Mathématiques.</p>
             </div>
         </div>
     </section>
 
     <!-- SECTION COMPÉTENCES -->
     <section id="competences" class="container section">
-        <h2>Compétences</h2>
+        <h2 class="section-title">Compétences</h2>
 
         <!-- Onglets interactifs -->
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="tech-tab" data-bs-toggle="pill" data-bs-target="#tech" type="button" role="tab">
+                <button
+                    class="nav-link active"
+                    id="tech-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#tech"
+                    type="button"
+                    role="tab"
+                    aria-controls="tech"
+                    aria-selected="true"
+                >
                     Techniques
                 </button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="soft-tab" data-bs-toggle="pill" data-bs-target="#soft" type="button" role="tab">
+                <button
+                    class="nav-link"
+                    id="soft-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#soft"
+                    type="button"
+                    role="tab"
+                    aria-controls="soft"
+                    aria-selected="false"
+                >
                     Soft Skills
                 </button>
             </li>
@@ -105,20 +155,20 @@
 
         <div class="tab-content" id="pills-tabContent">
             <!-- Compétences techniques -->
-            <div class="tab-pane fade show active" id="tech" role="tabpanel">
+            <div class="tab-pane fade show active" id="tech" role="tabpanel" aria-labelledby="tech-tab">
                 <div class="row">
                     <div class="col-md-6">
-                        <p>HTML5</p>
+                        <p class="mb-1">HTML5</p>
                         <div class="progress">
                             <div class="progress-bar skill-bar bg-success" data-skill="70"></div>
                         </div>
 
-                        <p class="mt-3">CSS / Bootstrap</p>
+                        <p class="mt-3 mb-1">CSS / Bootstrap</p>
                         <div class="progress">
                             <div class="progress-bar skill-bar bg-info" data-skill="70"></div>
                         </div>
 
-                        <p class="mt-3">JavaScript</p>
+                        <p class="mt-3 mb-1">JavaScript</p>
                         <div class="progress">
                             <div class="progress-bar skill-bar bg-warning" data-skill="70"></div>
                         </div>
@@ -127,8 +177,8 @@
             </div>
 
             <!-- Soft skills -->
-            <div class="tab-pane fade" id="soft" role="tabpanel">
-                <ul>
+            <div class="tab-pane fade" id="soft" role="tabpanel" aria-labelledby="soft-tab">
+                <ul class="mb-0">
                     <li>Travail en équipe</li>
                     <li>Communication</li>
                     <li>Organisation</li>
@@ -140,20 +190,32 @@
 
     <!-- SECTION EXPÉRIENCES -->
     <section id="experience" class="container section">
-        <h2>Expériences</h2>
+        <h2 class="section-title">Expériences</h2>
 
         <div class="accordion" id="expAccordion">
-
             <div class="accordion-item">
                 <h2 class="accordion-header" id="exp2-heading">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2">
+                    <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#exp2"
+                        aria-expanded="false"
+                        aria-controls="exp2"
+                    >
                         Mini-Projet Web (2025)
                     </button>
                 </h2>
-                <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#expAccordion">
+
+                <div
+                    id="exp2"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="exp2-heading"
+                    data-bs-parent="#expAccordion"
+                >
                     <div class="accordion-body">
-                        Réalisation d’un mini‑projet portant sur la création d’une page web interactive en utilisant HTML, CSS (Bootstrap) et JavaScript.
-    
+                        Réalisation d’un mini-projet portant sur la création d’une page web interactive
+                        en utilisant HTML, CSS (Bootstrap) et JavaScript.
                     </div>
                 </div>
             </div>
@@ -162,14 +224,19 @@
 
     <!-- SECTION PROJETS -->
     <section id="projets" class="container section">
-        <h2>Projets</h2>
+        <h2 class="section-title">Projets</h2>
+
         <div class="row g-3">
             <div class="col-md-4">
                 <div class="card project-card h-100">
                     <div class="card-body">
                         <h5 class="card-title">Portfolio personnel</h5>
-                        <p class="card-text">Site web présentant mes projets et compétences, réalisé en HTML/CSS/JS.</p>
-                        <a href="#" class="btn btn-outline-primary btn-sm">Voir le projet</a>
+                        <p class="card-text">
+                            Site web présentant mes projets et compétences, réalisé en HTML/CSS/JS.
+                        </p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">
+                            Voir le projet
+                        </a>
                     </div>
                 </div>
             </div>
@@ -178,8 +245,9 @@
 
     <!-- SECTION CENTRES D’INTÉRÊT -->
     <section id="interets" class="container section">
-        <h2>Centres d’intérêt</h2>
-        <ul class="list-inline">
+        <h2 class="section-title">Centres d’intérêt</h2>
+
+        <ul class="list-inline mb-0">
             <li class="list-inline-item badge bg-primary m-1">Technologie</li>
             <li class="list-inline-item badge bg-secondary m-1">Sport</li>
             <li class="list-inline-item badge bg-success m-1">Lecture</li>
@@ -193,7 +261,7 @@
         © 2025 – Elboni Marwa – CV Interactif
     </footer>
 
-    <!-- Bootstrap JS + ton script -->
+    <!-- Bootstrap JS + script perso -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>

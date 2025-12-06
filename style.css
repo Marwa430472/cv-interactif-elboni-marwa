@@ -1,14 +1,38 @@
-/* Espace pour la navbar fixe */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Espace pour la navbar fixe + style global */
 body {
     padding-top: 80px;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    color: #212529;
 }
 
 /* Sections */
 .section {
     margin-top: 60px;
     margin-bottom: 40px;
+}
+
+/* Titres de sections */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 60px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(45deg, #0d6efd, #20c997);
 }
 
 /* Photo de profil */
@@ -18,7 +42,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #343a40;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
 
 /* Timeline formation */
@@ -26,37 +50,52 @@ body {
     border-left: 3px solid #0d6efd;
     padding-left: 20px;
 }
+
 .timeline-item {
     margin-bottom: 20px;
+    position: relative;
 }
+
 .timeline-item::before {
     content: "";
     width: 12px;
     height: 12px;
     background: #0d6efd;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     left: -27px;
-    top: 5px;
-    display: inline-block;
+    top: 6px;
 }
 
 /* Cartes projet */
 .project-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.18);
 }
 
 /* Barres de compétences animées */
 .progress {
     height: 18px;
+    background-color: #e9ecef;
 }
+
 .skill-bar {
     width: 0%;
     transition: width 1.2s ease-in-out;
+}
+
+/* Navbar */
+.navbar-brand {
+    letter-spacing: 0.03em;
+}
+
+/* Badges centres d’intérêt */
+.badge {
+    font-size: 0.85rem;
 }
 
 /* Mode sombre */
@@ -64,16 +103,25 @@ body.dark-mode {
     background-color: #121212;
     color: #f8f9fa;
 }
+
 body.dark-mode .navbar,
 body.dark-mode footer {
     background-color: #000;
 }
+
 body.dark-mode .card {
     background-color: #1e1e1e;
+    border-color: #2b2b2b;
 }
+
 body.dark-mode .timeline {
     border-left-color: #ffc107;
 }
+
 body.dark-mode .timeline-item::before {
     background: #ffc107;
+}
+
+body.dark-mode .section-title::after {
+    background: linear-gradient(45deg, #ffc107, #fd7e14);
 }
